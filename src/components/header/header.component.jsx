@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
@@ -22,9 +23,9 @@ class Header extends React.Component {
         </div>
         <div className="header-btm">
           <div className="wrapper">
-            <a href="index.html" className="logo">
+            <Link to="/" className="logo">
               <img src="images/logo.png" alt="Sweet Shop logo" />
-            </a>
+            </Link>
             <div className="locations-section">
               <i>
                 <img src="images/lications-icon.png" alt="" />
@@ -41,27 +42,27 @@ class Header extends React.Component {
                 <div className="respo_close">&#10006;</div>
                 <ul className="menu">
                   <li>
-                    <a href="index.html">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <a href="about.html">About</a>
+                    <Link to="/aboutus">About</Link>
                   </li>
-                  <li className="sub-menu">
-                    <a href="project.html">Products</a>
-                  </li>
-                  <li>
-                    <a href="gallery.html">Services</a>
+                  <li className="sub-menuXX">
+                    <Link to="/product-list">Products</Link>
                   </li>
                   <li>
-                    <a href="ourbusiness.html">Gifts</a>
+                    <Link to="/">Services</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Gifts</Link>
                   </li>
                 </ul>
               </nav>
               <ul className="ecommerce-links">
                 <li>
-                  <a href="index.html">
+                  <Link to="/">
                     <img src="images/ecommerce-icon1.png" alt="" />
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="about.html">

@@ -1,20 +1,21 @@
 import React from "react";
-// import logo from "./logo.svg";
+import { Route } from "react-router-dom";
 import "./App.css";
+
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
-import Banner from "./components/banner/banner.component";
-import PopularSweets from "./components/popular-sweets/popular-sweets.component";
-import OurMenu from "./components/our-menu/our-menu.component";
+import HomePage from "./components/homepage/homepage.component";
+import ProductList from "./components/product-list/product-list.component";
+import AboutUs from "./components/aboutus/aboutus.component";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Banner/>
-      <OurMenu/>
-      <PopularSweets/>
-      <Footer/>
+    <div>
+      <Header />
+      <Route exact={true} path="/" component={HomePage} />
+      <Route path="/product-list" component={ProductList} />
+      <Route path="/aboutus" component={AboutUs} />
+      <Footer />
     </div>
   );
 }
